@@ -1,0 +1,91 @@
+body * {
+    font-family: 'Inter', sans-serif;
+}
+
+div#container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container img{
+    margin-bottom: 4px;
+}
+
+div#display{
+    padding: 20px;    
+    display: flex;
+    flex-direction: column;
+}
+
+div#display input{
+    width: 400px;
+    height: 40px;
+    margin: 5px;    
+    font-size: 16px;
+    text-align: center;
+}
+
+div#entrada {
+    padding: 20px;    
+    display: flex;
+    flex-direction: column;
+}
+
+#entrada input {
+    width: 400px;
+    height: 40px;
+    margin: 5px;    
+    font-size: 16px;
+    text-align: center;
+}
+
+#result{
+    padding: 20px;    
+    display: flex;
+    flex-direction: column;
+}
+
+#result input{
+    width: 400px;
+    height: 40px;
+    margin: 5px;    
+    font-size: 16px;
+    text-align: center; 
+}
+
+div#teclado {
+    padding: 20px;
+}
+
+div#teclado button {   
+    width: 120px;
+    height: 50px;
+    margin: 20px 10px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    border: 1px solid gray;
+}
+
+#extraFila #btnClear {
+    background-color: lightcoral;
+    color: white;
+}
+
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 3.5rem;
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
