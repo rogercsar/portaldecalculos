@@ -1,4 +1,30 @@
 let codElement = document.querySelector('#funcaoSelecionada');
+let input1 = document.querySelector('#firstNumber');
+let input2 = document.querySelector('#secNumber');
+let input3 = document.querySelector('#funcaoSelecionada')
+let btnCampo = document.querySelector('#newInput');
+let opcao = false;
+
+function criaNovoCampo(){
+    let btnCampo = document.querySelector('#newInput');
+    let  input4 = document.createElement('input');
+    input4.setAttribute('placeholder', 'Insira um valor');
+    input4.setAttribute('id', 'entrada3');
+    input4.setAttribute('type', 'number');
+    document.getElementById('entrada').appendChild(input4); 
+    btnCampo.setAttribute('value', '-');
+    btnCampo.setAttribute('onclick', 'removeCampo()'); 
+    opcao = true;   
+}
+
+function removeCampo(){
+    let btnCampo = document.querySelector('#newInput');
+    btnCampo.setAttribute('value', '+');
+    let novocampo = document.querySelector('#entrada3');
+    novocampo.remove();
+    btnCampo.setAttribute('onclick', 'criaNovoCampo()'); 
+    opcao = false;
+}
 
 function chamaCalc(){
     let input1 = document.querySelector('#firstNumber');
@@ -83,6 +109,25 @@ function chamaCalc(){
         let displayForm = document.querySelector('#displayForm');
         inputResult.value = resultado;
         displayForm.value = 'v²' + num1 + " * " + num2;
+    }
+
+    if(funcao == "Baskara"){
+        if (input1 && input2 == ""){
+            alert('Adicione valores');
+        } 
+        else {
+            let inputResult = document.querySelector('#displayResult');
+            let displayForm = document.querySelector('#displayForm');
+            let input1 = document.querySelector('#firstNumber');
+            let input2 = document.querySelector('#secNumber');
+            let input4 = document.querySelector('#entrada3');
+            let num1 = parseFloat(input1.value);
+            let num2 = parseFloat(input2.value);
+            let num3 = parseFloat(input4.value);
+            resultado = num1 + num2 + num3;
+            inputResult.value = resultado;
+            displayForm.value = 'N1 + N2 + N3';
+        }
     }
 
     if(funcao == "Velocidade"){
@@ -225,7 +270,7 @@ function compartilhar(){
     let displayForm = document.querySelector('#displayForm');
 
 	let shareResult = { 
-	 text: "Fórmula: " + `${inputResult.value}` + " | Resultado: " + `${displayForm.value}`,
+	 text: "Fórmula: " + `${displayForm.value}` + " | Resultado: " + `${inputResult.value}`,
 	}
 	if (typeof navigator.share === 'function'){
 	navigator.share(shareResult)

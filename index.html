@@ -15,28 +15,36 @@
         <img src="https://cdn-icons-png.flaticon.com/512/1728/1728317.png"></img>
         <div id="display">
           
-            <input id="funcaoSelecionada" list="funcoes" placeholder="Selecione uma função">
+            <input type="text" id="funcaoSelecionada" list="funcoes" placeholder="Selecione uma função">
             <datalist id="funcoes">
-                <option value="Soma">
-                <option value="Subtração"> 
-                <option value="Divisão">     
-                <option value="Multiplicação">
-                <option value="Porcentagem">  
-                <option value="Raiz Quadrada">      
-                <option value="Velocidade">
-                <option value="Força">
-                <option value="Distância">
-                <option value="Volts">
-                <option value="Densidade">
-                <option value="QuiloWatts">
-                <option value="Massa">  
-                <option value="Volume">  
-                <option value="Personalizada">         
+                <select>
+                    <option data-value="1" value="Soma"></option>
+                    <option data-value="2" value="Subtração"></option> 
+                    <option data-value="3" value="Divisão"></option>     
+                    <option data-value="4" value="Multiplicação"></option>
+                    <option data-value="5" value="Porcentagem"></option>  
+                    <option data-value="6" value="Raiz Quadrada"></option> 
+                    <option data-value="7" value="Baskara"></option>
+                    <option data-value="8" value="Velocidade"></option>
+                    <option data-value="9" value="Força"></option>
+                    <option data-value="10" value="Distância"></option>
+                    <option data-value="11" value="Volts"></option>
+                    <option data-value="12" value="Densidade"></option>
+                    <option data-value="13" value="QuiloWatts"></option>
+                    <option data-value="14" value="Massa"></option>  
+                    <option data-value="15" value="Volume"></option>  
+                    <option data-value="16" value="Personalizada"></option>     
+                </select>  
             </datalist>  
         </div>
         <div id="entrada">
             <input type="number" id="firstNumber" placeholder="Insira um valor">
             <input type="number" id="secNumber" placeholder="Insira um valor">
+        </div>
+        <div id="novosCampos">
+            <input type="button" id="newInput" value="+" onclick="criaNovoCampo()">
+        </div>
+        <div id="formula">    
             <input type="text" id="displayForm" placeholder="Fórmula" disabled>  
         </div>  
         <div id="result">
